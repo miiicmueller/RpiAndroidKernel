@@ -84,6 +84,9 @@
 static unsigned boardrev, serial;
 static unsigned uart_clock;
 static unsigned reboot_part = 0;
+// Modification Michael Mueller
+static char reboot_mode = 0 ;
+
 
 static void __init bcm2708_init_led(void);
 
