@@ -3,14 +3,13 @@
 #
 
 menuconfig BRCM_CHAR_DRIVERS
-	tristate "Broadcom Char Drivers"
-	depends on PROC_FS
+	bool "Broadcom Char Drivers"
 	help
 	  Broadcom's char drivers
 
 config BCM_VC_CMA
 	bool "Videocore CMA"
-	depends on CMA
+	depends on CMA && BRCM_CHAR_DRIVERS
 	default n
         help
           Helper for videocore CMA access.
